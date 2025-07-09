@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; padding: 20px; }
+.seat { width: 30px; height: 30px; margin: 4px; background: #ccc; display: inline-block; text-align: center; line-height: 30px; cursor: pointer; }
+.single { }
+.couple { background: #cff; }
+.selected { outline: 3px solid green; }
+
