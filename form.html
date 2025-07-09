@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>Confirm Booking</title></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Booking</title>
+</head>
 <body>
   <h1>Confirm Your Booking</h1>
   <form action="https://formsubmit.co/acrpublicinfo@gmail.com" method="POST">
+    <!-- ✅ Redirect back to your website after submission -->
+    <input type="hidden" name="_next" value="https://malaysiawolf.github.io/movie-booking-site/">
+
     <input type="hidden" name="hall" id="hallField">
     <input type="hidden" name="seat" id="seatField">
+
     <p>Name: <input type="text" name="name" required></p>
     <p>Email: <input type="email" name="email" required></p>
     <p>Hall: <span id="hallOut"></span></p>
     <p>Seat: <span id="seatOut"></span></p>
     <p>Please pay RM30 via DuitNow to <strong>12345678-ABCD</strong>.</p>
+    
     <button type="submit">Submit Booking</button>
   </form>
+
   <script>
     const p = new URLSearchParams(window.location.search);
     const hall = p.get('hall'), seat = p.get('seat');
